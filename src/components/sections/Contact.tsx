@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { RevealOnScroll } from "./RevealOnScroll";
-import emailjs from 'emailjs-com'
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com'
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -9,16 +9,16 @@ export function Contact() {
         message:""
     })
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault()
 
         emailjs
             .sendForm(
                 import.meta.env.VITE_SERVICE_ID, 
                 import.meta.env.VITE_TEMPLATE_ID, 
-                e.target, 
+                e.target as HTMLFormElement, 
                 import.meta.env.VITE_PUBLIC_KEY)
-            .then((result) =>{
+            .then((_result: EmailJSResponseStatus) =>{
                 alert("Message Sent!");
                 setFormData({name:"", email:"", message:""});
             })
