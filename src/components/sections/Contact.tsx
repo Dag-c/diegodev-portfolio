@@ -31,8 +31,8 @@ export function Contact() {
         className="min-h-screen flex items-center justify-center py-20"
     >
         <RevealOnScroll>
-            <div className="px-4 w-full max-w-4xl">
-                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text 
+            <div className="w-[80vw] min-w-[300px] max-w-[700px] px-4">
+                <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text 
                 text-transparent"
                 > 
                     Get in Touch
@@ -40,7 +40,7 @@ export function Contact() {
 
                 <form className="space-y-6" onSubmit={handleSubmit}>
 
-                    <div className="relative">
+                    <div className="w-full">
                         <input 
                             type="text" 
                             id="name" 
@@ -54,7 +54,7 @@ export function Contact() {
                         />
                     </div>
 
-                    <div className="relative">
+                    <div className="w-full">
                         <input 
                             type="email" 
                             id="email" 
