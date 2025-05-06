@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { About } from './components/sections/About'
 import { Projects } from './components/sections/Projects'
 import { Contact } from './components/sections/Contact'
+import { Products } from './components/sections/Products'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,6 +24,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Products />
     </div>
     </>
   )
