@@ -247,7 +247,7 @@ export const Projects = () => {
                     </div>
                     <div className='flex justify-between items-center'>
                         <a 
-                        href='http://3.148.134.151/apidocs/'
+                        href='https://apiecommercedagc.ddns.net/apidocs/'
                         className='text-blue-500 hover:text-blue-400 transition-colors my-4'
                         >
                             View project →
