@@ -9,7 +9,6 @@ import { useState } from 'react'
 import { About } from './components/sections/About'
 import { Projects } from './components/sections/Projects'
 import { Contact } from './components/sections/Contact'
-import { Products } from './components/sections/Products'
 import { Dashboard } from './components/sections/Dashboard'
 import { RegisterUser } from './components/sections/dashboard/RegisterUser';
 import { Login } from './components/sections/dashboard/Login';
@@ -43,7 +42,6 @@ function App() {
             <About />
             <Projects />
             <Contact />
-            <Products />
           </>
         } />
         
