@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import { RevealOnScroll } from './RevealOnScroll';
+import { RevealOnScroll } from '../RevealOnScroll';
 
 interface Product {
   created_at: string;
@@ -11,7 +12,7 @@ interface Product {
   stock: number;
 }
 
-export const Products: React.FC = () => {
+export const ProductList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -46,19 +47,12 @@ export const Products: React.FC = () => {
     <section id='products' className="min-h-screen flex items-center justify-center py-20">
         <RevealOnScroll>
             <div className="w-[80vw] min-w-[300px] max-w-[700px] px-4">
-                <h1 className="text-3xl font-bold mb-4">Product List</h1>
+            <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-500 to-blue-400 bg-clip-text text-transparent">Product List</h2>
         
             {loading ? (
                 <div className="text-center">Loading...</div>
             ) : (
-                <div>
-                <button
-                    onClick={fetchProducts}
-                    className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-                >
-                    Update Products
-                </button>
-
+                <div className='flex flex-col gap-4'>
                 <table className="min-w-full table-auto border-collapse border border-gray-300">
                     <thead>
                     <tr>
@@ -81,7 +75,16 @@ export const Products: React.FC = () => {
                     ))}
                     </tbody>
                 </table>
-            </div>
+
+                <button
+                    onClick={fetchProducts}
+                    className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                    Update Products
+                </button>
+
+                <Link to="/dashboard" className="text-blue-500 hover:underline">&larr; Back to Dashboard</Link>
+                </div>
         )}
             </div>
         </RevealOnScroll>

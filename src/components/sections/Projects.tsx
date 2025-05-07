@@ -7,6 +7,7 @@ import { DiMsqlServer, DiRedis, DiDotnet } from "react-icons/di";
 import { TbSdk, TbFileDatabase } from "react-icons/tb";
 import { FaFileCsv } from "react-icons/fa6";
 import { RevealOnScroll } from './RevealOnScroll';
+import { Link } from 'react-router-dom';
 
 
 export const Projects = () => {
@@ -246,12 +247,12 @@ export const Projects = () => {
                         ))}
                     </div>
                     <div className='flex justify-between items-center'>
-                        <a 
-                        href='https://apiecommercedagc.ddns.net/apidocs/'
+                    <Link 
+                        to="/dashboard" 
                         className='text-blue-500 hover:text-blue-400 transition-colors my-4'
-                        >
-                            View project →
-                        </a>
+                    >
+                        Go to Dashboard →
+                    </Link>
                     </div>
                 </div>
 
