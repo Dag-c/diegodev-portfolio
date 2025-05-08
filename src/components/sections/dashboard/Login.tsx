@@ -22,7 +22,7 @@ export const Login = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || 'Error al iniciar sesión');
+        throw new Error(errorData.message || errorData.error || 'Error al iniciar sesión');
       }
 
       const data = await response.json();
@@ -30,8 +30,11 @@ export const Login = () => {
 
       // Opcional: Redirige o muestra mensaje
       console.log('Login exitoso. Token:', data.token);
+      alert(`✔️ Successful login`);
     } catch (err: any) {
-      setError(err.message || 'Ocurrió un error');
+      const errorMessage = err.message || err.error || 'Ocurrió un error';
+      setError(errorMessage);
+      alert(`❌ Error:  ${errorMessage}`);
     }
   };
 
