@@ -21,6 +21,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const hideNav = location.pathname.startsWith('/dashboard/') && location.pathname !== '/dashboard';  
+  
 
   return (
     <>

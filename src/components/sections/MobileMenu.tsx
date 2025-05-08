@@ -8,6 +8,12 @@ type NavbarProps = {
 
 export const MobileMenu = ({menuOpen, setMenuOpen}: NavbarProps) => {
     
+    const scrollToId = (id: string) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     return (
         <div className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
@@ -29,8 +35,13 @@ export const MobileMenu = ({menuOpen, setMenuOpen}: NavbarProps) => {
                 <XMarkIcon className="text-blue-500 hover:text-violet-900 transition-colors"/>
             </button>
             <a
-                        href='#home'
-                        onClick={() => setMenuOpen(false)}
+                           
+                        onClick={() => 
+                        {   setMenuOpen(false); 
+                            setTimeout(() => {
+                                scrollToId('home');
+                            }, 250); 
+                        }}
                         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                                     ${menuOpen 
                                         ? "opacity-100 translate-y-0" 
@@ -40,19 +51,27 @@ export const MobileMenu = ({menuOpen, setMenuOpen}: NavbarProps) => {
                         Home
                     </a>
                     <a
-                        href='#about'
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => 
+                            {   setMenuOpen(false); 
+                                setTimeout(() => {
+                                    scrollToId('about');
+                                }, 250); 
+                            }}
                         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                             ${menuOpen 
                                 ? "opacity-100 translate-y-0" 
-                                : "opacity-0 translate-y-5"}
+                                : "opacity-0 translate-y-5"} 
                     `}
                     > 
                         About
                     </a>
                     <a
-                        href='#projects'
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => 
+                            {   setMenuOpen(false); 
+                                setTimeout(() => {
+                                    scrollToId('projects');
+                                }, 250); 
+                            }}
                         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                             ${menuOpen 
                                 ? "opacity-100 translate-y-0" 
@@ -62,8 +81,12 @@ export const MobileMenu = ({menuOpen, setMenuOpen}: NavbarProps) => {
                         Projects
                     </a>
                     <a
-                        href='#contact'
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => 
+                            {   setMenuOpen(false); 
+                                setTimeout(() => {
+                                    scrollToId('contact');
+                                }, 250); 
+                            }}
                         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                             ${menuOpen 
                                 ? "opacity-100 translate-y-0" 

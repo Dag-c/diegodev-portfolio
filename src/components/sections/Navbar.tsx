@@ -31,7 +31,10 @@ export const Navbar = ({ menuOpen, setMenuOpen }: NavbarProps) => {
 
           <Bars3Icon
             className="w-7 h-5 relative cursor-pointer z-40 md:hidden text-blue-500 hover:text-violet-900 transition-colors"
-            onClick={() => setMenuOpen((prev: boolean) => !prev)}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setMenuOpen((prev: boolean) => !prev);
+            }}            
           />
 
           <div className="hidden md:flex items-center space-x-8">
