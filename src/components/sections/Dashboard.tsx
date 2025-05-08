@@ -7,10 +7,10 @@ import { ProductList } from './dashboard/ProductList';
 export function Dashboard() {
   return (
     <div className='p-4 w-full'>
-      <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-        Dashboard
-      </h2>
       <nav className="min-h-screen flex w-full flex-col items-center justify-center py-20">
+        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+          Dashboard
+        </h2>
         <div className="flex flex-col gap-6 w-[80vw] min-w-[200px] max-w-[500px] px-4">
           <Link to="register" className="text-center w-full border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all 
                         duration-200 hover:-translate-y-0.5 hover: shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">

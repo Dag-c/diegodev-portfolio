@@ -20,7 +20,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const hideNav = location.pathname.startsWith('/dashboard/') && location.pathname !== '/dashboard';  
+  const hideNav = location.pathname.startsWith('/dashboard');  
   
 
   return (
