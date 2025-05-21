@@ -234,7 +234,9 @@ export const Projects = () => {
 
                     <h3 className='text-xl font-bold mb-2'>E-commerce API with Flask</h3>
                     <p className='text-gray-400 mb-4'>
-                        Developed a RESTful API for e-commerce with CRUD endpoints for managing customers, products, and orders.
+                        Developed a full-stack e-commerce application with a RESTful API and a user-friendly dashboard. 
+                        The project includes CRUD operations for customers, products, and orders, and it's deployed on AWS EC2. 
+                        The live dashboard is integrated into my portfolio for testing and demonstration purposes.
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {api_ecommercer.map((tech, key) => (

@@ -17,9 +17,8 @@ export const Home = () => {
                     Hi. I'm Diego Guillén
                 </h1>
                 <p className="text-gray-400 text-lg mb-8 max-w-lg max-auto">
-                    I'am a full-stack developer who loves crafting clean, scalable web applications.
-                    My goal is to build solutions that offer both execptional performance and a delightful
-                    user experience.
+                    I'm a full-stack developer passionate about solving real-world problems through scalable and maintainable solutions. 
+                    I prioritize performance and usability, and I stay current with the latest tech trends.
                 </p>
                 <div className="flex justify-center space-x-4">
                     <button 
